@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin-top: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+html {
+  font-size: 1rem;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #142B6F;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.125rem;
+}
+
+.section {
+  margin: 0 auto;
+  width: 80%;
+  padding-top: 5.625rem;
+  padding-bottom: 5.625rem;
+}
+.section__form {
+  display: flex;
+}
+@media (max-width: 768px) {
+  .section__form {
+    flex-direction: column;
+  }
+}
+.section__form input {
+  width: 100%;
+  padding: 0.9375rem;
+  border-radius: 4px 0px 0px 4px;
+  border: 0.125rem solid #ccc;
+}
+@media (max-width: 768px) {
+  .section__form input {
+    padding: 0.625rem;
+  }
+}
+.section__form input::-moz-placeholder {
+  font-weight: 700;
+  font-size: 1.125rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+}
+.section__form input::placeholder {
+  font-weight: 700;
+  font-size: 1.125rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+}
+.section__form input:focus {
+  outline: none;
+}
+.section__form button {
+  background-color: #142B6F;
+  color: #FFF;
+  width: 30%;
+  padding: 0.625rem 0.9375rem;
+  border: 0.125rem solid #142B6F;
+  border-radius: 0px 4px 4px 0px;
+  cursor: pointer;
+}
+.section__form button img {
+  width: 15%;
+}
+@media (max-width: 768px) {
+  .section__form button {
+    margin-left: 0;
+    margin-top: 0.625rem;
+    width: 100%;
+    padding: 0.2678571429rem 0.9375rem;
+  }
+  .section__form button img {
+    width: 5%;
+  }
+}
+@media (max-width: 425px) {
+  .section__form button img {
+    width: 10%;
+  }
+}
+.section__books__items {
+  margin: 5.625rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.section__books__items .book {
+  flex-basis: calc(33.333% - 20px);
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 0.25rem;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .section__books__items .book {
+    flex-basis: calc(50% - 20px);
+  }
+}
+@media (max-width: 425px) {
+  .section__books__items .book {
+    flex-basis: calc(100% - 20px);
+  }
+}
+.section__books__items .book h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+  .section__books__items .book h2 {
+    font-size: 1.125rem;
+  }
+}
+.section__books__items .book p {
+  font-size: 1.125rem;
+  margin-bottom: 5px;
+}
+@media (max-width: 768px) {
+  .section__books__items .book p {
+    font-size: 0.875rem;
+  }
+}
+.section p.no-results {
+  display: none;
+  font-size: 2.25rem;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .section p.no-results {
+    font-size: 0.875rem;
+  }
+}/*# sourceMappingURL=main.css.map */

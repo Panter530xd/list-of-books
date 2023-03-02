@@ -1,0 +1,24 @@
+@use "../abstracts/variables" as var;
+
+html {
+  font-size: var.$font-size-base;
+}
+
+body {
+  font-family: var.$font-family-base;
+  font-weight: var.$font-weight-normal;
+  line-height: var.$line-height-base;
+  color: var.$text-color-base;
+}
+
+h1 {
+  font-size: var.$heading-size-base;
+}
+
+h2 {
+  font-size: var.$heading-size-small;
+}
+
+h3 {
+  font-size: var.$font-size-medium;
+}

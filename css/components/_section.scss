@@ -1,0 +1,118 @@
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/variables" as var;
+@use "sass:math";
+
+.section {
+  margin: 0 auto;
+  width: var.$max-width-base;
+  padding-top: (var.$gutter-base * 3);
+  padding-bottom: (var.$gutter-base * 3);
+
+  &__form {
+    display: flex;
+
+    @include mix.tablet-styles {
+      flex-direction: column;
+    }
+
+    & input {
+      width: 100%;
+      padding: math.div(var.$gutter-base, 2);
+      border-radius: 4px 0px 0px 4px;
+      border: (var.$border-width-base) solid #ccc;
+
+      @include mix.tablet-styles {
+        padding: math.div(var.$gutter-base, 3);
+      }
+
+      &::placeholder {
+        font-weight: (var.$font-weight-bold);
+        font-size: (var.$font-size-medium);
+        font-family: (var.$font-family-base);
+        line-height: (var.$line-height-base);
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    & button {
+      background-color: (var.$text-color-base);
+      color: (var.$background-color-base);
+      width: 30%;
+      padding: math.div(var.$gutter-base, 3) math.div(var.$gutter-base, 2);
+      border: (var.$border-width-base) solid (var.$text-color-base);
+      border-radius: 0px 4px 4px 0px;
+      cursor: pointer;
+      & img {
+        width: 15%;
+      }
+
+      @include mix.tablet-styles {
+        margin-left: 0;
+        margin-top: math.div(var.$gutter-base, 3);
+        width: 100%;
+        padding: math.div(var.$gutter-base, 7) math.div(var.$gutter-base, 2);
+        & img {
+          width: 5%;
+        }
+      }
+      @include mix.mobile-l-styles {
+        & img {
+          width: 10%;
+        }
+      }
+    }
+  }
+
+  &__books__items {
+    margin: (var.$gutter-base * 3) auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    & .book {
+      flex-basis: calc(33.333% - 20px);
+      margin-bottom: 20px;
+      padding: 20px;
+      background-color: #f5f5f5;
+      border-radius: var.$border-radius-base;
+      text-align: center;
+
+      @include mix.tablet-styles {
+        flex-basis: calc(50% - 20px);
+      }
+
+      @include mix.mobile-l-styles {
+        flex-basis: calc(100% - 20px);
+      }
+    }
+
+    & .book h2 {
+      font-size: (var.$heading-size-small);
+      margin-bottom: 10px;
+
+      @include mix.tablet-styles {
+        font-size: (var.$font-size-medium);
+      }
+    }
+
+    & .book p {
+      font-size: (var.$font-size-medium);
+      margin-bottom: 5px;
+
+      @include mix.tablet-styles {
+        font-size: (var.$font-size-small);
+      }
+    }
+  }
+  & p.no-results {
+    display: none;
+    font-size: (var.$heading-size-base);
+    text-align: center;
+    @include mix.tablet-styles {
+      font-size: (var.$font-size-small);
+    }
+  }
+}
