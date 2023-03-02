@@ -6,7 +6,6 @@
   margin: 0 auto;
   width: var.$max-width-base;
   padding-top: (var.$gutter-base * 3);
-  padding-bottom: (var.$gutter-base * 3);
 
   &__form {
     display: flex;
@@ -30,6 +29,7 @@
         font-size: (var.$font-size-medium);
         font-family: (var.$font-family-base);
         line-height: (var.$line-height-base);
+        width: 100%;
       }
 
       &:focus {

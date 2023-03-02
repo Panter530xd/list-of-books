@@ -50,7 +50,6 @@ h3 {
   margin: 0 auto;
   width: 80%;
   padding-top: 5.625rem;
-  padding-bottom: 5.625rem;
 }
 .section__form {
   display: flex;
@@ -76,12 +75,14 @@ h3 {
   font-size: 1.125rem;
   font-family: "Roboto", sans-serif;
   line-height: 1.5;
+  width: 100%;
 }
 .section__form input::placeholder {
   font-weight: 700;
   font-size: 1.125rem;
   font-family: "Roboto", sans-serif;
   line-height: 1.5;
+  width: 100%;
 }
 .section__form input:focus {
   outline: none;
